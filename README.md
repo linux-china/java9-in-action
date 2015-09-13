@@ -21,6 +21,8 @@ How to use module in JDK 9
 
 #### compile
 
+Please execute "mkdir -p target/mods/org.astro target/mods/com.greetings" first.
+
 1. javac -d target/mods/org.astro src/main/java/org/astro/module-info.java src/main/java/org/astro/World.java
 
 2. javac -modulepath target/mods -d target/mods/com.greetings src/main/java/com/greetings/module-info.java src/main/java/com/greetings/Main.java
@@ -29,6 +31,7 @@ How to use module in JDK 9
 
 #### package
 
+Please execute "mkdir -p target/mlib" first.
 
 1. jar --create --archive=target/mlib/org.astro@1.0.jar --module-version=1.0 -C target/mods/org.astro .
 
