@@ -1,3 +1,5 @@
+rm -rf target
+
 mkdir -p target/mods
 
 echo "building astro"
