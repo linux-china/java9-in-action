@@ -32,7 +32,7 @@ java -modulepath ${MODULE_PATH} -m com.greetings/com.greetings.Main
 
 echo "${GREEN}linking application${NC}"
 
-jlink --module-path ${MODULE_PATH}:$JAVA_HOME/jmods --add-modules com.greetings --output target/greetings-image
+jlink --strip-debug --module-path ${MODULE_PATH}:$JAVA_HOME/jmods --add-modules com.greetings --output target/greetings-image
 
 echo "${GREEN}run from image${NC}"
 
