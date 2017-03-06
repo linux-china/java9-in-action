@@ -19,4 +19,22 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.greetings.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <outputDirectory>../target/mods</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
