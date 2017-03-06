@@ -12,4 +12,21 @@
     <artifactId>astro</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.astro.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <outputDirectory>../target/mods</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
