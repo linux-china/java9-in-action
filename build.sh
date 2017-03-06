@@ -22,13 +22,13 @@ rm -rf greetings/target
 
 mkdir -p greetings/target/classes
 
-find greetings/src/main/java -type f -name "*.java" -print | xargs javac -modulepath ${MODULE_PATH} -d greetings/target/classes
+find greetings/src/main/java -type f -name "*.java" -print | xargs javac --module-path ${MODULE_PATH} -d greetings/target/classes
 
 jar -cfe ${MODULE_PATH}/greetings.jar com.greetings.Main -C greetings/target/classes .
 
 echo "${GREEN}running greeting application${NC}"
 
-java -modulepath ${MODULE_PATH} -m com.greetings/com.greetings.Main
+java --module-path ${MODULE_PATH} -m com.greetings/com.greetings.Main
 
 echo "${GREEN}linking application${NC}"
 
